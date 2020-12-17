@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Core.Models.Property>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col col-4">
+            @Html.Partial("Filters")
+
+        </div>
+        <div class="col col-8">
+            @foreach (var prop in Model)
+            {
+                <div class="card" style="width: 18rem;">
+                    <a href="#" class="">
+
+                        <img class="card-img-top" src="https://images.novelestate.com/estate/22195/tbn_29.jpg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">ID: @prop.Id</h5>
+                        <p class="card-text">Area: @prop.Area , Balcony: @prop.Balcony</p>
+                    </div>
+                </div>
+
+
+
+            }
+
+        </div>
+    </div>
+</div>
+
